@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hellotext:</strong>
+  <%= @hello_model.hellotext %>
+</p>
+
+<p>
+  <strong>Uptime:</strong>
+  <%= @hello_model.uptime %>
+</p>
+
+<%= link_to 'Edit', edit_hello_model_path(@hello_model) %> |
+<%= link_to 'Back', hello_models_path %>

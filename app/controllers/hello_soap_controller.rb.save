@@ -1,0 +1,12 @@
+soap_action "hello",
+        :args =>  { :input => :string },
+        :return => :string
+  def hello
+    render :soap => ( "Hello," + params[:input] )
+  end
+class HelloSoapController < ApplicationController
+  soap_service namespace: 'urn:WashOut'
+
+  def hello
+  end
+end

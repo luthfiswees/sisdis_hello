@@ -1,0 +1,48 @@
+<h3>PING</h3>
+
+<%= form_tag({controller: "hello_models", action: "ping"}) do %>
+  <%= submit_tag("PING ME") %>
+<% end %>
+
+
+<h3>Saldo di cabang ini</h3>
+
+<%= form_tag({controller: "hello_models", action: "getSaldo"}) do %>
+  <%= label_tag(:user_id, "Your user id") %>
+  <%= text_field_tag(:user_id) %>
+  <%= submit_tag("Check") %>
+<% end %>
+
+
+<h3>Total Saldo</h3>
+
+<%= form_tag({controller: "hello_models", action: "getTotalSaldo"}) do %>
+  <%= label_tag(:user_id, "Your user id") %>
+  <%= text_field_tag(:user_id) %>
+  <%= submit_tag("Check") %>
+<% end %>
+
+
+<h3>Transfer</h3>
+
+<%= form_tag({controller: "hello_models", action: "transfer"}) do %>
+  <%= label_tag(:user_id, "Your user id") %>
+  <%= text_field_tag(:user_id) %>
+  <%= label_tag(:nilai, "Amount") %>
+  <%= text_field_tag(:nilai) %>
+  <%= submit_tag("SEND THE MONEY") %>
+<% end %>
+
+
+<h3>Register</h3>
+
+<%= form_tag({controller: "hello_models", action: "register"}) do %>
+  <%= label_tag(:user_id, "Your user id") %>
+  <%= text_field_tag(:user_id) %>
+  <%= label_tag(:nama, "Your name") %>
+  <%= text_field_tag(:nama) %>
+  <%= label_tag(:ip_domisili, "Your address plz") %>
+  <%= text_field_tag(:ip_domisili) %>
+  <%= submit_tag("PUT ME IN") %>
+<% end %>
+

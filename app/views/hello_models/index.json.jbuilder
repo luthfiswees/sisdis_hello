@@ -1,0 +1,1 @@
+json.array! @hello_models, partial: 'hello_models/hello_model', as: :hello_model

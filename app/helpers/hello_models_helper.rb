@@ -1,0 +1,2 @@
+module HelloModelsHelper
+end

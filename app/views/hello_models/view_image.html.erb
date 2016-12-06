@@ -1,0 +1,16 @@
+<%
+	namafile = "#{params['filename']}.#{params['format']}"
+	@tuple   = Image.where( filename: namafile ).first
+%>
+
+<h2>PR 4</h2>
+
+<% if @tuple != nil then %>
+	<h4>Gambar</h4>
+	<img src="<%= "data:image/jpeg;base64,#{@tuple.fileimage}" %>" /><br>
+	
+	<h4>Nama file :   <%= @tuple.filename %></h4><br>
+	<h4>Ukuran file : <%= @tuple.filesize %> kB</h4>
+<% else  %>
+	<h3>Gambar tidak ditemukan</h3>
+<% end %>

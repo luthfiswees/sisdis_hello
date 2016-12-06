@@ -1,0 +1,25 @@
+<%= form_for(@hello_model) do |f| %>
+  <% if @hello_model.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hello_model.errors.count, "error") %> prohibited this hello_model from being saved:</h2>
+
+      <ul>
+      <% @hello_model.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :hellotext %><br>
+    <%= f.text_field :hellotext %>
+  </div>
+  <div class="field">
+    <%= f.label :uptime %><br>
+    <%= f.number_field :uptime %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

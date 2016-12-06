@@ -1,0 +1,1 @@
+json.partial! "hello_models/hello_model", hello_model: @hello_model

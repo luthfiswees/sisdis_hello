@@ -1,0 +1,10 @@
+<h2>PR 4</h2>
+
+<%= form_tag({action: :post_image}, multipart: true) do %>
+  <%= file_field_tag 'picture' %>
+  <%= submit_tag 'Kirim'  %>
+<% end %>
+
+<br><br><br><br>
+<h4><%= @uploaded  %></h4>
+

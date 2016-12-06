@@ -1,0 +1,11 @@
+<% 
+	@hellomodel = HelloModel.first
+	@hellomodel.uptime = `uptime` 
+%>
+
+<h1>
+	<%= @hellomodel.hellotext %>
+</h1>
+<h2>
+	<%= @hellomodel.uptime  %>
+</h2>

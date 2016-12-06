@@ -1,0 +1,12 @@
+<h1>PR 5</h1>
+
+<%
+	@server_visit_count = Visit.all.first.counter + 1
+	Visit.all.first.delete
+	Visit.create( counter: @server_visit_count ).save
+%>
+
+<p>IP : 152.118.33.102 </p>
+<p>Pemilik : Luthfi Kurnia Putra </p>
+<p>Penumpang : <%= request.remote_ip %> </p>
+<p>CNT : <%= @server_visit_count %> </p>

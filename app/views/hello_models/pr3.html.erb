@@ -1,0 +1,15 @@
+<h2>PR 3</h2>
+
+<form method="post" action="/hello_models/hello_soap">
+	<h4>URL WSDL</h4>
+	<input type="text" name="url_wsdl">
+
+	<h4>String Dikirim</h4>
+	<input type="text" name="input_text">
+	
+	<br><br><br>
+	<input type="submit" value="Kirim">
+</form>
+
+<%= @url_wsdl  %>
+<%= @input_text %>
